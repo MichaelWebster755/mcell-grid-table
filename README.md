@@ -60,38 +60,42 @@ The author has not validated any of these Linux instructions.
 
 1. Linux usually already has an acceptable version of AutoConf, but if not then
    perform: `sudo apt install autoconf`
-2. Linux usually alfeady has an acecptbale version of AutoMake, but if not then
+1. Linux usually alfeady has an acecptbale version of AutoMake, but if not then
    perform: `sudo apt install automake`
-3. `sudo apt install pandoc`
-4. `sudo apt install libxml2` (to get xlstproc)
-5. `sudo apt install libxslt` (to get xlstproc)
-6. `sudo apt install docbook`
+1. `sudo apt install dejagnu`
+1. `sudo apt install lua`
+1. `sudo apt install pandoc`
+1. `sudo apt install libxml2` (to get xlstproc)
+1. `sudo apt install libxslt` (to get xlstproc)
+1. `sudo apt install docbook`
     1. You might need to set XML_CATALOG_FILES environment var in your
        "~/.bashrc" or "~/.bash_profile"
-7. `sudo apt install docbook-xsl`
-8. `sudo apt install openjdk-11-jdk` (openjdk-11-jre might work)
-9. `sudo apt install fop`
-10. Add `export FOP=/path/to/your/fop-2.6/fop/fop.sh` to your "~/.bashrc" or
-    "~/.bash_profile"
+1. `sudo apt install docbook-xsl`
+1. `sudo apt install openjdk-11-jdk` (openjdk-11-jre might work)
+1. `sudo apt install fop`
+1. Add `export FOP=/path/to/your/fop-2.6/fop/fop.sh` to your "~/.bashrc" or
+   "~/.bash_profile"
 
 
 #### For Redhat and CentOS
 
 1. Linux usually already has an acceptable version of AutoConf, but if not then
    perform: `yum install autoconf`
-2. Linux usually alfeady has an acecptbale version of AutoMake, but if not then
+1. Linux usually alfeady has an acecptbale version of AutoMake, but if not then
    perform: `yum install automake`
-3. `yum install pandoc`
-4. `yum install libxml2` (to get xlstproc)
-5. `yum install libxslt` (to get xlstproc)
-6. `yum install docbook`
+1. `yum install dejagnu`
+1. `yum install lua`
+1. `yum install pandoc`
+1. `yum install libxml2` (to get xlstproc)
+1. `yum install libxslt` (to get xlstproc)
+1. `yum install docbook`
     1. You might need to set XML_CATALOG_FILES environment var in your
        "~/.bashrc" or "~/.bash_profile"
-7. `yum install docbook-xsl`
-8. `yum install java-11-openjdk`
-9. `yum install fop`
-10. Add `export FOP=/path/to/your/fop-2.6/fop/fop.sh` to your "~/.bashrc" or
-    "~/.bash_profile"
+1. `yum install docbook-xsl`
+1. `yum install java-11-openjdk`
+1. `yum install fop`
+1. Add `export FOP=/path/to/your/fop-2.6/fop/fop.sh` to your "~/.bashrc" or
+   "~/.bash_profile"
 
 
 ### macOS Prerequisites
@@ -162,11 +166,13 @@ The following instructions assume you will be using Cygwin.
    (from Cygwin Setup view: category). Newer versions should be ok.  Let Setup
    install dependencies.
     1. Devel/autoconf2.5
-    2. Devel/automake1.16
-    3. Libs/libxml2 (to get xsltproc)
-    4. Libs/libxslt (to get xlstproc)
-    5. Text/docbook-xml45
-    6. Text/docbook-xsl
+    1. Devel/automake1.16
+    1. Devel/dejagnu
+    1. Interpreters/lua
+    1. Libs/libxml2 (to get xsltproc)
+    1. Libs/libxslt (to get xlstproc)
+    1. Text/docbook-xml45
+    1. Text/docbook-xsl
 2. Don't forget to add `export XML_CATALOG_FILES=/etc/xml/catalog` to your
    "~/.bashrc" or "~/.bash_profile"
 3. Install [Pandoc](https://github.com/jgm/pandoc/releases/latest) as a native
