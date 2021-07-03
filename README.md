@@ -99,23 +99,23 @@ The author has not validated any of these Linux instructions.
 The following instructions assume you will be using
 [Homebrew](https://brew.sh/).
 
-1. macOS already comes with as acceptable version of AutoConf, but if you want
-   it upgraded: `brew install autoconf`
-2. macOS already comes with an acceptable version of AutoMake, but if you want
-   it upgraded: `brew install automake`
-3. `brew install pandoc`
-4. `brew install libxml2` (to get xlstproc)
-5. `brew install libxslt` (to get xsltproc)
-6. `brew install docbook`
+1. `brew install autoconf`
+1. `brew install automake`
+1. `brew install dejagnu`
+1. `brew install lua`
+1. `brew install pandoc`
+1. `brew install libxml2` (to get xlstproc)
+1. `brew install libxslt` (to get xsltproc)
+1. `brew install docbook`
     1. Don't forget to add
        `export XML_CATALOG_FILES="$(brew --prefix)/etc/xml/catalog"` to your
        "~/.zshrc" or "~/.zsh_profile"
-7. `brew install docbook-xsl`
-8. Install OpenJDK 11 using either
+1. `brew install docbook-xsl`
+1. Install OpenJDK 11 using either
     1. [AdoptOpenJDK](https://adoptopenjdk.net/) instructions, or ...
     2. `brew install --cask adoptopenjdk`
-9. `brew install fop`
-10. Add `export FOP=/path/to/your/fop-2.6/fop/fop.sh` to your "~/.zshrc" or
+1. `brew install fop`
+1. Add `export FOP=/path/to/your/fop-2.6/fop/fop.sh` to your "~/.zshrc" or
     "~/.zsh_profile"
 
 Author has not validated the above instructions work as intended.
