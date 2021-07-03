@@ -1,0 +1,63 @@
+<table>
+<title>
+Merge Cells Must be Retangular
+</title>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1" colwidth="11*" />
+<colspec colnum="2" colname="c2" colwidth="11*" />
+<colspec colnum="3" colname="c3" colwidth="11*" />
+<colspec colnum="4" colname="c4" colwidth="11*" />
+<tbody>
+<row>
+<entry>
+
+ z1
+
+</entry>
+<entry>
+
+ z2
+
+</entry>
+<entry namest="c3" nameend="c4" rowsep="0">
+
+ z3
+
+
+</entry>
+</row>
+<row>
+<entry>
+
+ z4
+
+</entry>
+<entry namest="c2" nameend="c3">
+
+ z5
+
+</entry>
+<entry>
+
+ z6
+
+</entry>
+</row>
+</tbody>
+<tfoot>
+<row>
+<entry namest="c1" nameend="c4">
+
+ Notes:
+
+ - This table has a footer, but no header
+ - Merging cells z3 and z5 would not be
+   rectangular so while it makes a great
+   Tetris piece, it does not create a
+   merged cell
+
+</entry>
+</row>
+</tfoot>
+</tgroup>
+</table>

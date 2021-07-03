@@ -1,0 +1,98 @@
+<table>
+<caption>
+Simple Merge Cell Example
+</caption>
+<col style="width: 6em;" />
+<col style="width: 7em;" />
+<col style="width: 7em;" />
+<col style="width: 7em;" />
+<thead>
+<tr>
+<th colspan="2">
+
+h1
+
+</th>
+<th>
+
+h2
+
+</th>
+<th>
+
+h3
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2">
+
+c1
+abc
+xyz
+
+</td>
+<td>
+
+c2
+
+</td>
+<td>
+
+c3
+
+</td>
+<td>
+
+c4
+
+</td>
+</tr>
+<tr>
+<td>
+
+c5
+
+</td>
+<td colspan="2" rowspan="2">
+
+ c6
+ 123
+ 456
+
+ 789
+
+ - Item A
+ - Item B
+ - Item C
+
+</td>
+</tr>
+<tr>
+<td>
+
+c7
+
+
+
+
+
+
+
+</td>
+<td>
+
+c8
+
+
+
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>

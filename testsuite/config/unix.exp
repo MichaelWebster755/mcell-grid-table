@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Michael Webster
+# SPDX-FileCopyrightText: 2021 Western Digital Corporation or its affiliates
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+proc mcgt_clm_exit {} {}
+proc mcgt_clm_version {} {}

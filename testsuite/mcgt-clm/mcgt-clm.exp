@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2021 Michael Webster
+# SPDX-FileCopyrightText: 2021 Western Digital Corporation or its affiliates
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+#------------------------------------------------------------------------------
+# mcgt-clm.exp
+# 
+# Merge Cell Grid Table DejaGnu test tool for command line mode while using
+# docbook as the output format
+# 
+# Find all "input" markdown files in testsuite.  Each "input" markdown file is
+# a separate test case.  Each test case runs the mcell-grid-table.lua script
+# against the "input" markdown to generate "actual" output markdown which is
+# then compared against hard-coded "expected" markdown.
+# 
+# - The "input" markdown has a file name like <tcname>-in.md
+# - The "actual" markdown output has a file name like <tcname>-act.md
+# - The "expected" markdown has a file name like <tcname>-exp.md
+# 
+# In each file name above the <tcname> is the name of the test case
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+# Procedure to run one test case with text input and docbook fragment output
+#------------------------------------------------------------------------------
+proc exec-txt2docbook-test { tcname } {
+    global MCGT_LUA
+    # Delete any existing test case "actual" markdown since we will be
+    # generating new "actual" markdown in the execution of the
+    # mcell-grid-table.lua script below
+    if { [file exists $tcname-act.txt] } {
+        exec rm $tcname-act.txt
+    }
+    # Run the tool in command-line mode to generate new "actual" markdown
+    exec lua $MCGT_LUA -t docbook < $tcname-in.txt > $tcname-act.txt
+    # Compare "actual" to "expected"
+    set rc [ diff "$tcname-act.txt" "$tcname-exp.txt" ]
+    if { $rc == 1 } {
+        pass $tcname
+    } else {
+        fail $tcname
+    }
+}
+
+#------------------------------------------------------------------------------
+# Procedure to run one test case with text input and HTML fragment output
+#------------------------------------------------------------------------------
+proc exec-txt2html-test { tcname } {
+    global MCGT_LUA
+    # Delete any existing test case "actual" markdown since we will be
+    # generating new "actual" markdown in the execution of the
+    # mcell-grid-table.lua script below
+    if { [file exists $tcname-act.txt] } {
+        exec rm $tcname-act.txt
+    }
+    # Run the tool in command-line mode to generate new "actual" markdown
+    exec lua $MCGT_LUA -t html < $tcname-in.txt > $tcname-act.txt
+    # Compare "actual" to "expected"
+    set rc [ diff "$tcname-act.txt" "$tcname-exp.txt" ]
+    if { $rc == 1 } {
+        pass $tcname
+    } else {
+        fail $tcname
+    }
+}
+
+#------------------------------------------------------------------------------
+# Find and execute all test cases
+#------------------------------------------------------------------------------
+set file_list [glob $srcdir/mcgt-clm/*-txt2docbook-in.txt]
+foreach fn $file_list {
+    regexp "(.*-txt2docbook)-in.txt" $fn ignore tcname
+    exec-txt2docbook-test $tcname
+}
+
+set file_list [glob $srcdir/mcgt-clm/*-txt2html-in.txt]
+foreach fn $file_list {
+    regexp "(.*-txt2html)-in.txt" $fn ignore tcname
+    exec-txt2html-test $tcname
+}

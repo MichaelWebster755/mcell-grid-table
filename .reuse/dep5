@@ -1,0 +1,34 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Merge Cell Grid Table
+Upstream-Contact: Michael Webster <86027201+MichaelWebster755@users.noreply.github.com>
+Source: https://github.com/MichaelWebster755/mcell-grid-table
+
+Files: doc/*.png
+Copyright: 2021 Michael Webster
+Copyright: 2021 Western Digital Corporation or its affiliates
+License: GPL-3.0-or-later
+
+Files: doc/*.odp
+Copyright: 2021 Michael Webster
+Copyright: 2021 Western Digital Corporation or its affiliates
+License: GPL-3.0-or-later
+
+Files: doc/*.xml
+Copyright: 2021 Michael Webster
+Copyright: 2021 Western Digital Corporation or its affiliates
+License: GPL-3.0-or-later
+
+Files: doc/*.pdf
+Copyright: 2021 Michael Webster
+Copyright: 2021 Western Digital Corporation or its affiliates
+License: GPL-3.0-or-later
+
+Files: testsuite/mcgt-clm/*-exp.txt
+Copyright: 2021 Michael Webster
+Copyright: 2021 Western Digital Corporation or its affiliates
+License: GPL-3.0-or-later
+
+Files: testsuite/mcgt-clm/*-in.txt
+Copyright: 2021 Michael Webster
+Copyright: 2021 Western Digital Corporation or its affiliates
+License: GPL-3.0-or-later

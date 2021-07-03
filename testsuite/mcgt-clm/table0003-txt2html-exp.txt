@@ -1,0 +1,61 @@
+<table>
+<caption>
+Merge Cells Must be Retangular
+</caption>
+<col style="width: 11em;" />
+<col style="width: 11em;" />
+<col style="width: 11em;" />
+<col style="width: 11em;" />
+<tbody>
+<tr>
+<td>
+
+ z1
+
+</td>
+<td>
+
+ z2
+
+</td>
+<td colspan="2" style="border-bottom: none; ">
+
+ z3
+
+
+</td>
+</tr>
+<tr>
+<td>
+
+ z4
+
+</td>
+<td colspan="2" style="border-top: none; ">
+
+ z5
+
+</td>
+<td>
+
+ z6
+
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="4">
+
+ Notes:
+
+ - This table has a footer, but no header
+ - Merging cells z3 and z5 would not be
+   rectangular so while it makes a great
+   Tetris piece, it does not create a
+   merged cell
+
+</td>
+</tr>
+</tfoot>
+</table>

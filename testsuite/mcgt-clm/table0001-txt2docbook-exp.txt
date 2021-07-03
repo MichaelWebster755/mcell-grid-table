@@ -1,0 +1,100 @@
+<table>
+<title>
+Simple Merge Cell Example
+</title>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1" colwidth="6*" />
+<colspec colnum="2" colname="c2" colwidth="7*" />
+<colspec colnum="3" colname="c3" colwidth="7*" />
+<colspec colnum="4" colname="c4" colwidth="7*" />
+<thead>
+<row>
+<entry namest="c1" nameend="c2">
+
+h1
+
+</entry>
+<entry>
+
+h2
+
+</entry>
+<entry>
+
+h3
+
+</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry morerows="1">
+
+c1
+abc
+xyz
+
+</entry>
+<entry>
+
+c2
+
+</entry>
+<entry>
+
+c3
+
+</entry>
+<entry>
+
+c4
+
+</entry>
+</row>
+<row>
+<entry>
+
+c5
+
+</entry>
+<entry namest="c3" nameend="c4" morerows="1">
+
+ c6
+ 123
+ 456
+
+ 789
+
+ - Item A
+ - Item B
+ - Item C
+
+</entry>
+</row>
+<row>
+<entry>
+
+c7
+
+
+
+
+
+
+
+</entry>
+<entry>
+
+c8
+
+
+
+
+
+
+
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>

@@ -1,0 +1,175 @@
+<table>
+<title>
+SCSI INQUIRY Command
+</title>
+<tgroup cols="9">
+<colspec colnum="1" colname="c1" colwidth="7*" align="center" />
+<colspec colnum="2" colname="c2" colwidth="10*" align="center" />
+<colspec colnum="3" colname="c3" colwidth="10*" align="center" />
+<colspec colnum="4" colname="c4" colwidth="10*" align="center" />
+<colspec colnum="5" colname="c5" colwidth="10*" align="center" />
+<colspec colnum="6" colname="c6" colwidth="10*" align="center" />
+<colspec colnum="7" colname="c7" colwidth="10*" align="center" />
+<colspec colnum="8" colname="c8" colwidth="10*" align="center" />
+<colspec colnum="9" colname="c9" colwidth="10*" align="center" />
+<thead>
+<row>
+<entry morerows="1">
+
+
+
+Byte
+
+</entry>
+<entry namest="c2" nameend="c9">
+
+Bit
+
+</entry>
+</row>
+<row>
+<entry>
+
+7
+
+</entry>
+<entry>
+
+6
+
+</entry>
+<entry>
+
+5
+
+</entry>
+<entry>
+
+4
+
+</entry>
+<entry>
+
+3
+
+</entry>
+<entry>
+
+2
+
+</entry>
+<entry>
+
+1
+
+</entry>
+<entry>
+
+0
+
+</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>
+
+0
+
+</entry>
+<entry namest="c2" nameend="c9">
+
+Operation Code (12h)
+
+</entry>
+</row>
+<row>
+<entry>
+
+1
+
+</entry>
+<entry namest="c2" nameend="c7">
+
+Reserved
+
+</entry>
+<entry>
+
+Obsolete
+
+</entry>
+<entry>
+
+EVPD
+
+</entry>
+</row>
+<row>
+<entry>
+
+2
+
+</entry>
+<entry namest="c2" nameend="c9">
+
+Page Code
+
+</entry>
+</row>
+<row>
+<entry>
+
+3
+
+</entry>
+<entry colsep="0" align="left">
+
+ (MSB)
+
+</entry>
+<entry namest="c3" nameend="c8" morerows="1" colsep="0">
+
+
+Allocation Length
+
+
+</entry>
+<entry>
+
+
+
+</entry>
+</row>
+<row>
+<entry>
+
+4
+
+</entry>
+<entry colsep="0">
+
+
+
+</entry>
+<entry align="right">
+
+(LSB)
+
+</entry>
+</row>
+<row>
+<entry>
+
+5
+
+</entry>
+<entry namest="c2" nameend="c9">
+
+Control
+
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
