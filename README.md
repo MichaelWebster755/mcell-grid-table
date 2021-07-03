@@ -124,6 +124,10 @@ Author has not validated the above instructions work as intended.
 ### Package Install
 
 ```
+mkdir config
+aclocal
+autoconf
+automake --add-missing --foreign
 ./configure --prefix=$HOME/.local/share
 make
 make install
@@ -185,6 +189,10 @@ equivalent under MSYS.
 Within a Cygwin terminal window do the following:
 
 ```
+mkdir config
+aclocal
+autoconf
+automake --add-missing --foreign
 ./configure --prefix=`cygpath -u $APPDATA/pandoc`
 make
 make install
