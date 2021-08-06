@@ -122,3 +122,6 @@ class MCellGridTableBlockProcessor(BlockProcessor):
 class MCellGridTableExtension(Extension):
     def extendMarkdown(self, md):
         md.parser.blockprocessors.register(MCellGridTableBlockProcessor(md.parser), 'mcgtable', 175)
+
+def makeExtension(**kwargs):
+    return MCellGridTableExtension(**kwargs)
