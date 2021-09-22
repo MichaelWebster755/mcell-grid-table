@@ -32,5 +32,6 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
+        name: mcell-grid-table
         path: src/mcell-grid-table.lua
         retention-days: 30
