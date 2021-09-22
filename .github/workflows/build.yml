@@ -19,3 +19,12 @@ jobs:
       
     - name: Run autotools
       run: mkdir config && aclocal && autoconf && automake --add-missing --foreign
+      
+    - name: Configure
+      run: ./configure --prefix=$HOME/.local/share
+      
+    - name: Build & Install
+      run: make && make install
+      
+    - name: Check
+      run: make check
