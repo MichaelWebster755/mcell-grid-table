@@ -28,3 +28,9 @@ jobs:
       
     - name: Check
       run: make check
+      
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        path: src/mcell-grid-table.lua
+        retention-days: 30
