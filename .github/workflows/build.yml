@@ -1,0 +1,41 @@
+name: Makefile CI
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install dependencies
+      run: sudo apt install autoconf automake lua5.3
+      
+    - name: Run autotools
+      run: mkdir config && aclocal && autoconf && automake --add-missing --foreign
+      
+    - name: Configure
+      run: ./configure --prefix=$HOME/.local/share
+      
+    - name: Build & Install
+      run: make && make install
+      
+    - name: Check
+      run: make check
+      
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: mcell-grid-table
+        path: src/mcell-grid-table.lua
+        retention-days: 30
+        
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+          src/mcell-grid-table.lua
+          LICENSES/*
